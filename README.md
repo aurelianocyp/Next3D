@@ -9,6 +9,7 @@
   - `cd Next3D`
   - `conda env create -f environment.yml`
   - `conda activate next3d`
+  - `pip install pydantic==1.10.2`
   - 需要安装pytorch3d，上面三个步骤做完后先安装pytorch3d。用Ubuntu18.04别用20.04。然后先`conda install -c fvcore -c iopath -c conda-forge fvcore iopath`再`conda install -c bottler nvidiacub`再
 ```shell
 curl -LO https://github.com/NVIDIA/cub/archive/1.10.0.tar.gz
