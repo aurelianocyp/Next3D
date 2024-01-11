@@ -44,7 +44,7 @@ python gen_samples_next3d.py --outdir=out --trunc=0.7 --shapes=true --seeds=166 
     --lms_path=data/demo/demo_kpt2d.txt --lms_cond=True
 ```
 
-We visualize our .mrc shape files with [UCSF Chimerax](https://www.cgl.ucsf.edu/chimerax/). Please refer to [EG3D](https://github.com/NVlabs/eg3d) for more detailed instructions.
+We visualize our .mrc shape files with [UCSF Chimerax](https://www.cgl.ucsf.edu/chimerax/). Please refer to [EG3D](https://github.com/NVlabs/eg3d) for more detailed instructions.输出在out文件夹中
 
 
 ## Reenacting generative avatars
