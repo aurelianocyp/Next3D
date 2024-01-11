@@ -1,8 +1,3 @@
-
-<br>
-[Jingxiang Sun](https://mrtornado24.github.io/), [Xuan Wang](https://xuanwangvc.github.io/), [Lizhen Wang](https://lizhenwangt.github.io/), [Xiaoyu Li](https://xiaoyu258.github.io/), [Yong Zhang](https://yzhang2016.github.io/yongnorriszhang.github.io/), [Hongwen Zhang](https://hongwenzhang.github.io/), [Yebin Liu](http://www.liuyebin.com/)<br><br>
-
-
 [**Project**](https://mrtornado24.github.io/Next3D/) | [**Paper**](https://arxiv.org/abs/2211.11208) | [**Twitter**](https://twitter.com/JingxiangSun42/status/1630489816226988032?s=20)
 
 Abstract: *3D-aware generative adversarial networks (GANs) synthesize high-fidelity and multi-view-consistent facial images using only collections of single-view 2D imagery. Towards fine-grained control over facial attributes, recent efforts incorporate 3D Morphable Face Model (3DMM) to describe
