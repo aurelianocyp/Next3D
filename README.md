@@ -19,6 +19,7 @@ export CUB_HOME=$PWD/cub-1.10.0
 git clone https://github.com/facebookresearch/pytorch3d.git
 cd pytorch3d && pip install -e .
 ```
+也许也可能要pip uninstall tqdm termcolor tabulate pyyaml protalocker yacs iopath fvcore一下。但是这次安装最重要的是Ubuntu18.04
 ## Getting started
 
 Download our pretrained models following [the link](https://drive.google.com/drive/folders/1rbR5ZJ6LQYUSd5J5BkoVYNon_-Lb7KsZ?usp=share_link) and put it under `pretrained_models`. For training Next3D on the top of EG3D, please also download the pretrained checkpoint `ffhqrebalanced512-64.pkl` of [EG3D](https://github.com/NVlabs/eg3d/blob/main/docs/models.md).
