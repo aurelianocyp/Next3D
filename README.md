@@ -39,7 +39,7 @@ python gen_videos_next3d.py --outdir=out --trunc=0.7 --seeds=10720,12374,13393,1
 ```.bash
 # Generate images and shapes (as .mrc files) for the shown cases using pre-trained model
 
-python gen_samples.py --outdir=out --trunc=0.7 --shapes=true --seeds=166 \
+python gen_samples_next3d.py --outdir=out --trunc=0.7 --shapes=true --seeds=166 \
     --network=pretrained_models/next3d_ffhq_512.pkl --obj_path=data/demo/demo.obj \
     --lms_path=data/demo/demo_kpt2d.txt --lms_cond=True
 ```
