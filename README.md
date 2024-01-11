@@ -9,7 +9,16 @@
   - `cd Next3D`
   - `conda env create -f environment.yml`
   - `conda activate next3d`
-
+需要安装pytorch3d，上面三个步骤做完后先安装pytorch3d。用Ubuntu18.04别用20.04。然后先`conda install -c fvcore -c iopath -c conda-forge fvcore iopath`再`conda install -c bottler nvidiacub`再
+```shell
+curl -LO https://github.com/NVIDIA/cub/archive/1.10.0.tar.gz
+tar xzf 1.10.0.tar.gz
+export CUB_HOME=$PWD/cub-1.10.0
+```
+```shell
+git clone https://github.com/facebookresearch/pytorch3d.git
+cd pytorch3d && pip install -e .
+```
 ## Getting started
 
 Download our pretrained models following [the link](https://drive.google.com/drive/folders/1rbR5ZJ6LQYUSd5J5BkoVYNon_-Lb7KsZ?usp=share_link) and put it under `pretrained_models`. For training Next3D on the top of EG3D, please also download the pretrained checkpoint `ffhqrebalanced512-64.pkl` of [EG3D](https://github.com/NVlabs/eg3d/blob/main/docs/models.md).
