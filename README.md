@@ -73,7 +73,7 @@ You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.jso
 ### Reenacting samples
 seeds代表source identity，目前试过82 166 165
 ```.bash
-python reenact_avatar_next3d.py --drive_root=data/obama --network=pretrained_models/next3d_ffhq_512.pkl --grid=2x1 --seeds=166 --outdir=out --fname=reenact.mp4 --trunc=0.7 --lms_cond=1
+python reenact_avatar_next3d.py --drive_root=data/obama --grid=2x1 --seeds=166 --trunc=0.7 --lms_cond=1
 ```
 
 
