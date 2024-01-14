@@ -71,7 +71,7 @@ You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.jso
 
 
 ### Reenacting samples
-seeds代表source identity，目前试过82 166 165
+seeds代表source identity.效果比较好：166，85，90，不太好：165，
 ```.bash
 python reenact_avatar_next3d.py --drive_root=data/obama --grid=2x1 --seeds=166 --trunc=0.7 --lms_cond=1
 ```
