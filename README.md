@@ -75,7 +75,7 @@ seeds代表source identity.效果比较好： 25,49,85，90, 99, 166，164, 178(
 ```.bash
 python reenact_avatar_next3d.py --drive_root=data/obama --grid=1x1 --seeds=166 --trunc=0.7 --lms_cond=1
 ```
-
+如果要固定相机参数：--fixed_camera=True
 
 ## Training
 
