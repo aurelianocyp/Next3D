@@ -66,7 +66,7 @@ The video reenactment input contains three parts: camera poses `dataset.json`, F
 cd dataset_preprocessing/ffhq
 python preprocess_in_the_wild.py --indir=INPUT_IMAGE_FOLDER
 ```
-
+建议别在原环境prepare data，因为我怀疑现环境并不包括prepare data需要的库，最好还是另外配置环境
 You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.json'. Please put all these driving files into a same folder for reenactment later. 
 
 
