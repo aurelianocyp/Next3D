@@ -71,7 +71,7 @@ You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.jso
 
 
 ### Reenacting samples
-seeds代表source identity.效果比较好： 25,49,85，90, 99, 166，164, 178(小孩),258(小孩),269,287,299(女生)，300（小孩）  不太好：，13,89（女生）,165（女）,298,277(女性)，398（女性）
+seeds代表source identity.效果比较好： 25,49,85，90, 99, 166，164, 178(小孩),258(小孩),269,287,299(女生)，300（小孩），397（女生）  不太好：，13,89（女生）,165（女）,298,277(女性)，398（女性）
 ```.bash
 python reenact_avatar_next3d.py --drive_root=data/obama --grid=1x1 --seeds=166 --trunc=0.7 --lms_cond=1
 ```
@@ -114,18 +114,5 @@ Note that rendering-conditioned discriminator is not supported currently because
 ## One-shot portrait reenactment and stylization
 
 Code will come soon.
-
-## Citation
-
-```
-@inproceedings{sun2023next3d,
-  author = {Sun, Jingxiang and Wang, Xuan and Wang, Lizhen and Li, Xiaoyu and Zhang, Yong and Zhang, Hongwen and Liu, Yebin},
-  title = {Next3D: Generative Neural Texture Rasterization for 3D-Aware Head Avatars},
-  booktitle = {CVPR},
-  year = {2023}
-}
-```
-
-## Acknowledgements
 
 Part of the code is borrowed from [EG3D](https://github.com/NVlabs/eg3d) and [DECA](https://github.com/yfeng95/DECA).
