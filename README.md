@@ -114,5 +114,3 @@ Note that rendering-conditioned discriminator is not supported currently because
 ## One-shot portrait reenactment and stylization
 
 Code will come soon.
-
-Part of the code is borrowed from [EG3D](https://github.com/NVlabs/eg3d) and [DECA](https://github.com/yfeng95/DECA).
