@@ -78,6 +78,8 @@ git clone https://github.com/NVlabs/nvdiffrast 进入目录后pip install .，�
 
 下载Exp_Pca.bin到Deep3DFaceRecon_pytorch目录下的BFM文件夹中，在网盘next3d文件夹里
 
+貌似Deep3DFaceRecon_pytorch主页里提供了以上的安装指引，难绷
+
 You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.json'. Please put all these driving files into a same folder for reenactment later. 
 
 
