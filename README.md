@@ -68,17 +68,7 @@ python preprocess_in_the_wild.py --indir=INPUT_IMAGE_FOLDER
 ```
 建议别在原环境prepare data，因为我怀疑现环境并不包括prepare data需要的库，最好还是另外配置环境.使用Deep3DFaceRecon_pytorch里的environment吧
 
-git clone https://github.com/ipazc/mtcnn.git，讲mtcnn文件夹下的mtcnn文件夹提出来到ffhq文件夹中。
-
-git clone https://github.com/deepinsight/insightface.git,将insightface/recognition下的arcface_torch复制粘贴到Deep3DFaceRecon_pytorch/models文件夹下
-
-git clone https://github.com/NVlabs/nvdiffrast 进入目录后pip install .，使用Deep3DFaceRecon_pytorch的环境
-
-下载'BFM/01_MorphableModel.mat'到Deep3DFaceRecon_pytorch目录下的BFM文件夹中，在网盘里
-
-下载Exp_Pca.bin到Deep3DFaceRecon_pytorch目录下的BFM文件夹中，在网盘next3d文件夹里
-
-貌似Deep3DFaceRecon_pytorch主页里提供了以上的安装指引，难绷
+preprocessinthewild里是执行了多个python程序，其中test程序完全是d3drf里的，到d3drf里面去配置环境并运行就行。
 
 You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.json'. Please put all these driving files into a same folder for reenactment later. 
 
