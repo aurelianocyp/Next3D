@@ -83,7 +83,7 @@ python reenact_avatar_next3d.py --drive_root=data/obama --grid=1x1 --seeds=166 -
 ```
 如果要固定相机参数：--fixed_camera=True
 
-需要使用什么三维模型就将什么三维模型放在obama文件夹中就行，可以改个名，防止与原obama重合
+需要使用什么三维模型就将什么三维模型放在obama文件夹中就行，可以改个名，防止与原obama重合.输出在out文件夹中
 
 ## Training
 
