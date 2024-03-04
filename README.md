@@ -58,7 +58,10 @@ Ensure the [Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_py
 git submodule update --init --recursive
 ```
 如果中途下载失败了先使用 `git submodule deinit --all`清理一下
-Download the pretrained models for FLAME estimation following [DECA](https://github.com/yfeng95/DECA) and put them into `dataset_preprocessing/ffhq/deca/data`; download the pretrained models for gaze estimation through the [link](https://drive.google.com/drive/folders/1Jgej9q5W2IYXRa-CWCldyTVXeHk-Oi-I?usp=share_link) and put them into `dataset_preprocessing/ffhq/faceverse/data`.
+
+Download the pretrained models for FLAME estimation following [DECA](https://github.com/yfeng95/DECA)(deca_model.tar) and put them into `dataset_preprocessing/ffhq/deca/data`; 
+
+download the pretrained models for gaze estimation through the [link](https://drive.google.com/drive/folders/1Jgej9q5W2IYXRa-CWCldyTVXeHk-Oi-I?usp=share_link) and put them into `dataset_preprocessing/ffhq/faceverse/data`.
 
 ### Preparing datasets
 
