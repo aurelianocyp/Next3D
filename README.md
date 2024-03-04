@@ -61,7 +61,7 @@ git submodule update --init --recursive
 
 Download the pretrained models for FLAME estimation following [DECA](https://github.com/yfeng95/DECA)(deca_model.tar) and put them into `dataset_preprocessing/ffhq/deca/data`; 
 
-download the pretrained models for gaze estimation through the [link](https://drive.google.com/drive/folders/1Jgej9q5W2IYXRa-CWCldyTVXeHk-Oi-I?usp=share_link) and put them into `dataset_preprocessing/ffhq/faceverse/data`.
+download the pretrained models for gaze estimation through the [link](https://drive.google.com/drive/folders/1Jgej9q5W2IYXRa-CWCldyTVXeHk-Oi-I?usp=share_link)(faceverse_v3.npy exBase_52.npy) and put them into `dataset_preprocessing/ffhq/faceverse/data`.
 
 ### Preparing datasets
 
