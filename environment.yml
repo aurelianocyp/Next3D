@@ -36,3 +36,5 @@ dependencies:
     - mrcfile
     - tensorboard
     - jittor
+    - opencv-python
+    - torchvision
