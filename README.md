@@ -85,7 +85,7 @@ You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.jso
 ### Reenacting samples
 seeds代表source identity.效果比较好： 25,49,85，90, 99, 166，164, 178(小孩),258(小孩),269,287,299(女生)，300（小孩），397（女生）  不太好：，13,89（女生）,165（女）,298,277(女性)，398（女性）
 ```.bash
-python reenact_avatar_next3d.py --drive_root=data/obama --grid=1x1 --seeds=166 --trunc=0.7 --lms_cond=1
+python reenact_avatar_next3d.py --drive_root=data/obama --grid=1x1 --seeds=166 --trunc=0.7 --lms_cond=1 --network=pretrained_models/next3d_ffhq_512.pkl
 ```
 如果要固定相机参数：--fixed_camera=True
 
