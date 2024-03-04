@@ -116,10 +116,8 @@ python train_next3d.py --outdir=~/training-runs --cfg=ffhq --data=data/ffhq/imag
   --resume pretrained_models/ffhqrebalanced512-64.pkl
 ```
 
-# one-shot
-https://github.com/MrTornado24/Next3D/issues/27
 Note that rendering-conditioned discriminator is not supported currently because obtaining rendering is still time-consuming. We are trying to accelerate this process and the training code will keep updating.
-  
-## One-shot portrait reenactment and stylization
 
-Code will come soon.
+## one-shot
+https://github.com/MrTornado24/Next3D/issues/27
+
