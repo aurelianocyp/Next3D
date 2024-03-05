@@ -52,7 +52,7 @@ We visualize our .mrc shape files with [UCSF Chimerax](https://www.cgl.ucsf.edu/
 
 ## Reenacting generative avatars
 
-### Installation
+### Installation(这一步最好做一下)
 
 Ensure the [Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch/tree/6ba3d22f84bf508f0dde002da8fff277196fef21) submodule is properly initialized
 ```.bash
@@ -64,7 +64,7 @@ Download the pretrained models for FLAME estimation following [DECA](https://git
 
 download the pretrained models for gaze estimation through the [link](https://drive.google.com/drive/folders/1Jgej9q5W2IYXRa-CWCldyTVXeHk-Oi-I?usp=share_link)(faceverse_v3.npy exBase_52.npy faceverse_v3_old.npy) and put them into `dataset_preprocessing/ffhq/faceverse/data`.
 
-### Preparing datasets
+### Preparing datasets（这一步可以直接下载网盘里obama-modified.tar放到data文件夹中）
 
 The video reenactment input contains three parts: camera poses `dataset.json`, FLAME meshes ('.obj') and 2D landmark files ('.txt'). For quick start, you can download the processed talking video of President Obama [here](https://drive.google.com/file/d/1ph77uSlLz-xIVlBxwXP3Et7lTR0zHXQR/view?usp=sharing) and place the downloaded folder as `data/obama`. You can also preprocess your custom datasets by running the following commands:
 
