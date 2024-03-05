@@ -91,6 +91,14 @@ python reenact_avatar_next3d.py --drive_root=data/obama --grid=1x1 --seeds=166 -
 
 需要使用什么三维模型就将什么三维模型放在obama文件夹中就行，可以改个名，防止与原obama重合.输出在out文件夹中
 
+kpt2d.txt文件必须有
+
+kpt3d.txt可以删除
+
+png文件好像只是起索引的作用，文件名有用，内容没用
+
+obj文件特别有用，控制表情和唇部的
+
 ## Training
 
 
