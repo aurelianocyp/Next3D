@@ -135,3 +135,5 @@ Note that rendering-conditioned discriminator is not supported currently because
 ## one-shot
 https://github.com/MrTornado24/Next3D/issues/27
 
+https://github.com/NVlabs/eg3d/issues/28
+
