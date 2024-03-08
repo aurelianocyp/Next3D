@@ -72,9 +72,19 @@ The video reenactment input contains three parts: camera poses `dataset.json`, F
 cd dataset_preprocessing/ffhq
 python preprocess_in_the_wild.py --indir=INPUT_IMAGE_FOLDER
 ```
-建议别在原环境preprocess_in_the_wild.py，因为我怀疑现环境并不包括preprocess_in_the_wild.py需要的库，最好还是另外配置环境.使用Deep3DFaceRecon_pytorch里的environment吧(preprocess_in_the_wild.py里的每一步都在Deep3DFaceRecon_pytorch的环境里做)
+preprocessinthewild里是执行了多个python程序,建议一个一个分开运行（通过注释其他行）
 
-preprocessinthewild里是执行了多个python程序，其中test程序完全是d3drf里的，到d3drf里面去配置环境并运行就行。里面的多个python程序分开一步一步运行就行（建议重开一个虚拟机，因为3090太高级了不满足他的环境要求）
+batch_mtcnn.py可以在现有环境做。但是需要：
+- `pip install mtcnn`
+- `pip uninstall scipy`
+- `pip install tensorflow`
+- `pip install scipy`
+
+在ffhq文件夹下创建indir的文件夹，将png图片放置在indir文件夹内就行。运行完batch_mtcnn后在indir文件夹内会自动创建detections文件夹，里面放着各自图片对应的txt文件。
+
+建议别在原环境run Deep3DFaceRecon，因为我怀疑现环境并不包括run Deep3DFaceRecon需要的库，最好还是另外配置环境.使用Deep3DFaceRecon_pytorch里的environment吧
+
+，其中test程序完全是d3drf里的，到d3drf里面去配置环境并运行就行。里面的多个python程序分开一步一步运行就行（建议重开一个虚拟机，因为3090太高级了不满足他的环境要求）
 
 crop_images_in_the_wild.py运行的时候，存储图片的文件夹要与程序在同目录，图片都存储在目录下即可，目录下还需要一个detections的文件夹，可以直接将d3dfr里提供的预置数据集拿过来，这个程序的结果也只是在inputdir中创建一个crop文件夹，文件夹中是裁剪之后的图片
 
