@@ -72,7 +72,7 @@ The video reenactment input contains three parts: camera poses `dataset.json`, F
 cd dataset_preprocessing/ffhq
 python preprocess_in_the_wild.py --indir=INPUT_IMAGE_FOLDER
 ```
-建议别在原环境prepare data，因为我怀疑现环境并不包括prepare data需要的库，最好还是另外配置环境.使用Deep3DFaceRecon_pytorch里的environment吧
+建议别在原环境preprocess_in_the_wild.py，因为我怀疑现环境并不包括preprocess_in_the_wild.py需要的库，最好还是另外配置环境.使用Deep3DFaceRecon_pytorch里的environment吧(preprocess_in_the_wild.py里的每一步都在Deep3DFaceRecon_pytorch的环境里做)
 
 preprocessinthewild里是执行了多个python程序，其中test程序完全是d3drf里的，到d3drf里面去配置环境并运行就行。里面的多个python程序分开一步一步运行就行（建议重开一个虚拟机，因为3090太高级了不满足他的环境要求）
 
