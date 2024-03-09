@@ -37,6 +37,7 @@ if __name__ == '__main__':
 
         img_path = os.path.join(args.indir, img_file)
         lm_path = os.path.join(lm_dir, lm_file)
+        print("img_path:",img_path)
         im = Image.open(img_path).convert('RGB')
         _,H = im.size
         lm = np.loadtxt(lm_path).astype(np.float32)
