@@ -86,6 +86,8 @@ batch_mtcnn.py可以在现有环境做。但是需要：
 
 crop_images_in_the_wild.py运行的时候，存储图片的文件夹要与程序在同目录，图片都存储在目录下即可，目录下还需要一个detections的文件夹，可以直接将d3dfr里提供的预置数据集拿过来，这个程序的结果也只是在inputdir中创建一个crop文件夹，文件夹中是裁剪之后的图片。如果报prepocess.py 202行的错，那么参考https://blog.csdn.net/m0_53127772/article/details/132492224。无需先运行test程序
 
+3dface2idr_mat.py运行前需要进入deep3dfacerecon目录，然后`git clone https://github.com/deepinsight/insightface.git`,然后将insightface/recognition/arcface_torch手动复制到deep3dfacerecon中models文件夹中。创建Deep3DFaceRecon_pytorch/checkpoints/pretrained/results/<indir>/epoch_20_000000文件夹（注意，都是文件夹）。创建Deep3DFaceRecon_pytorch/BFM/01_MorphableModel.mat Deep3DFaceRecon_pytorch/BFM/Exp_Pca.bin 然后把BFM复制到ffhq目录下（可以先拖到ffhq下然后用命令复制cp -r BFM Deep3DFaceRecon_pytorch/）.结果会在crop中创建camera.json文件。但是需要先进行test操作，也就是得保障Deep3DFaceRecon_pytorch/checkpoints/pretrained/results/<indir>/epoch_20_000000文件夹内有mat，obj，png文件，才能得到正确的camera.json
+
 
 You will obtain FLAME meshes and 2D landmark files for frames and a 'dataset.json'. Please put all these driving files into a same folder for reenactment later. 
 
