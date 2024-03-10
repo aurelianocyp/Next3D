@@ -79,10 +79,13 @@ batch_mtcnn.py可以在现有环境做。但是需要：
 - `pip uninstall scipy`
 - `pip install tensorflow`
 - `pip install scipy`
+- `git clone https://github.com/NVlabs/nvdiffrast`
+- `cd nvdiffrast    # ./Deep3DFaceRecon_pytorch/nvdiffrast`
+- `pip install .`
 
 在ffhq文件夹下创建indir的文件夹，将png图片放置在indir文件夹内就行。运行完batch_mtcnn后在indir文件夹内会自动创建detections文件夹，里面放着各自图片对应的txt文件。
 
-建议别在原环境run Deep3DFaceRecon，因为我怀疑现环境并不包括run Deep3DFaceRecon需要的库，最好还是另外配置环境.使用Deep3DFaceRecon_pytorch里的environment吧。test程序完全是d3drf里的，到d3drf里面去配置环境并运行就行。里面的多个python程序分开一步一步运行就行（建议重开一个虚拟机，因为3090太高级了不满足他的环境要求）
+建议别在原环境run Deep3DFaceRecon，因为我怀疑现环境并不包括run Deep3DFaceRecon需要的库，最好还是另外配置环境(或者使用eg3d的环境).使用Deep3DFaceRecon_pytorch里的environment吧。test程序完全是d3drf里的，到d3drf里面去配置环境并运行就行。里面的多个python程序分开一步一步运行就行（建议重开一个虚拟机，因为3090太高级了不满足他的环境要求）
 
 crop_images_in_the_wild.py运行的时候，存储图片的文件夹要与程序在同目录，图片都存储在目录下即可，目录下还需要一个detections的文件夹，可以直接将d3dfr里提供的预置数据集拿过来，这个程序的结果也只是在inputdir中创建一个crop文件夹，文件夹中是裁剪之后的图片。如果报prepocess.py 202行的错，那么参考https://blog.csdn.net/m0_53127772/article/details/132492224。无需先运行test程序
 
