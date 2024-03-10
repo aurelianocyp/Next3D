@@ -73,6 +73,7 @@ cd dataset_preprocessing/ffhq
 python preprocess_in_the_wild.py --indir=INPUT_IMAGE_FOLDER
 ```
 preprocessinthewild里是执行了多个python程序,建议一个一个分开运行（通过注释其他行）
+建议使用eg3d的环境进行数据处理。
 
 batch_mtcnn.py可以在现有环境做。但是需要：
 - `pip install mtcnn`
