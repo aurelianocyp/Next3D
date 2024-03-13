@@ -151,3 +151,28 @@ https://github.com/MrTornado24/Next3D/issues/27
 
 https://github.com/NVlabs/eg3d/issues/28
 
+https://github.com/MrTornado24/Next3D/issues/38
+
+把pti压缩包下载到tmp中。使用next3d的环境, 参考原生pti的文档。先处理数据，然后训练即可`python scripts/run_pti.py --pivotal_tuning --label_path=myphoto.npy --mesh_path=myphoto.obj --label_path=myphoto.json `。一些注意事项：
+
+configs文件夹和utils文件夹复制到utils文件夹中。
+
+configs中paths_config中的dlib后面的dat路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。
+
+align_data中的pre process images中参数填上data。
+
+在data文件夹中创建data文件夹，将外data中的图片复制到内data中。
+
+将configs training criteria utils dnnlib models torch_utils training_avatar_texture文件夹复制到scripts文件夹中
+
+将scripts中的configs中的paths py里的eg3d_ffhq改为eg3d_ffhq = './pretrained_models/v10/network-snapshot-001362.pkl'
+
+将scripts/training/coaches/base coach中53行左右的 if label_path is not None:那一块注释掉。将同一代码中的get_label文件try下第一行改为`label = np.load(self.label_path)`。需要将相应照片的npy文件放在主目录下，npy怎么获得参看eg3d-priojector内容
+
+将get-verts函数中with open改为with open(self.mesh_path) as f:
+
+将scripts/training/projector中的w projector eg3d中的64行的 in G.synthesis.named_buffers()改为 in G.named_buffers()。下载vgg16.pt到主目录，将#url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'注释掉，并将下一行的url改为vgg16.pt。将两处[1,G.mapping.num_ws, 1]改为[1,18, 1].103行 c=label, v=verts
+
+
+
+
