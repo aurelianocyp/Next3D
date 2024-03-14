@@ -171,7 +171,7 @@ json文件就是常规的camera.json那种，但是其中必须有图片名+.png
 
 将scripts/training/projector中的w projector eg3d中的64行的 in G.synthesis.named_buffers()改为 in G.named_buffers()。下载vgg16.pt到主目录，将#url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'注释掉，并将下一行的url改为vgg16.pt。将两处[1,G.mapping.num_ws, 1]改为[1,18, 1].103行 c=label, v=verts
 
-运行完成后，latent code会保存在embeddings目录中，也就是reenact_avatar_texture_fixed_w的w_path参数，pti后的模型会保存在checkpoints中。图片结果会保存在tmp中。生成形象的命令：
+运行完成后，latent code会保存在embeddings目录中，也就是reenact_avatar_texture_fixed_w的w_path参数，pti后的模型会保存在checkpoints中。图片结果会保存在tmp中。如果觉得生成的太差，可以使用obama_modified中的obj文件。生成形象的命令：
 
 ```bash
 python reenact_avatar_texture_fixed_w.py --drive_root obama-modified --network checkpoints/model_eg3d_plus_img00000128.pt --outdir out --exp_cond 0 --fname reenact_texture_inversion.mp4 --w_path=embeddings/eg3d_plus/PTI/img00000128/0.pt
