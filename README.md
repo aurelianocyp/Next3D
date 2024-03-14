@@ -177,6 +177,14 @@ json文件就是常规的camera.json那种，但是其中必须有图片名+.png
 python reenact_avatar_texture_fixed_w.py --drive_root obama-modified --network checkpoints/model_eg3d_plus_img00000128.pt --outdir out --exp_cond 0 --fname reenact_texture_inversion.mp4 --w_path=embeddings/eg3d_plus/PTI/img00000128/0.pt
 ```
 
+报错： 
+···
+File "/root/autodl-tmp/1/PTI_animatable_eg3d/reenact_avatar_texture_fixed_w.py", line 140, in run_video_animation
+    camera_params = label_list[os.path.basename(img_path).replace('png', 'jpg')]
+KeyError: '00001.jpg'
+···
+将jpg改为png就行
+
 
 
 
