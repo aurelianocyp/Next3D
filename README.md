@@ -178,11 +178,11 @@ python reenact_avatar_texture_fixed_w.py --drive_root obama-modified --network c
 ```
 
 报错： 
-···
+```
 File "/root/autodl-tmp/1/PTI_animatable_eg3d/reenact_avatar_texture_fixed_w.py", line 140, in run_video_animation
     camera_params = label_list[os.path.basename(img_path).replace('png', 'jpg')]
 KeyError: '00001.jpg'
-···
+```
 将jpg改为png就行
 
 
