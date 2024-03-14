@@ -153,15 +153,13 @@ https://github.com/NVlabs/eg3d/issues/28
 
 https://github.com/MrTornado24/Next3D/issues/38
 
-把pti压缩包下载到tmp中。使用next3d的环境, 参考原生pti的文档。先处理数据，然后训练即可`python scripts/run_pti.py --pivotal_tuning --label_path=myphoto.npy --mesh_path=myphoto.obj --label_path=myphoto.json `。一些注意事项：
-
-configs文件夹和utils文件夹复制到utils文件夹中。
+把pti压缩包下载到tmp中。使用next3d的环境, 参考原生pti的文档。先处理数据，然后训练即可`python scripts/run_pti.py --pivotal_tuning --mesh_path=myphoto.obj --label_path=myphoto.json `。一些注意事项：
 
 configs中paths_config中的dlib后面的dat路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。
 
 align_data中的pre process images中参数填上data。
 
-在data文件夹中创建data文件夹，将外data中的图片复制到内data中。
+json文件就是常规的camera.json那种，但是其中必须有图片名+.png的那一个
 
 将configs training criteria utils dnnlib models torch_utils training_avatar_texture文件夹复制到scripts文件夹中
 
