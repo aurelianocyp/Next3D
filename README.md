@@ -155,19 +155,17 @@ https://github.com/MrTornado24/Next3D/issues/38
 
 把pti压缩包下载到tmp中。使用next3d的环境, 参考原生pti的文档。先处理数据，然后训练即可`python scripts/run_pti.py --pivotal_tuning --mesh_path=myphoto.obj --label_path=myphoto.json `。将obj文件和json放在住目录下，data文件中只放一个png，无需进行pti原始文档里的数据处理，直接运行scripts就行。一些注意事项：
 
-configs中paths_config中的dlib后面的dat路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。
+configs中paths_config中的dlib后面的dat路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。eg3d_ffhq改为`eg3d_ffhq = './pretrained_models/v10/network-snapshot-001362.pkl'`
 
 json文件就是常规的camera.json那种，但是其中必须有图片名+.png的那一个
 
 将configs training criteria utils dnnlib models torch_utils training_avatar_texture文件夹复制到scripts文件夹中: `cp -r configs training criteria utils dnnlib models torch_utils training_avatar_texture scripts/`
 
-将scripts中的configs中的paths py里的eg3d_ffhq改为eg3d_ffhq = './pretrained_models/v10/network-snapshot-001362.pkl'
+将scripts/training/coaches/base coach中205行的`label = [self.labels[f'{idx[3:8]}/'+idx+'.png']]`改为`label = [self.labels[idx+'.png']]`，214行也删掉`self.mesh_path, f'{idx[3:8]}/'+`
 
-将scripts/training/coaches/base coach中53行左右的 if label_path is not None:那一块注释掉。将同一代码中的get_label文件try下第一行改为`label = np.load(self.label_path)`。需要将相应照片的npy文件放在主目录下，npy怎么获得参看eg3d-priojector内容
+run_pti中104行default设置为eg3d_plus
 
-将get-verts函数中with open改为with open(self.mesh_path) as f:
-
-将scripts/training/projector中的w projector eg3d中的64行的 in G.synthesis.named_buffers()改为 in G.named_buffers()。下载vgg16.pt到主目录，将#url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'注释掉，并将下一行的url改为vgg16.pt。将两处[1,G.mapping.num_ws, 1]改为[1,18, 1].103行 c=label, v=verts
+将scripts/training/projector中的w plus projector eg3d中70行url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'注释掉，并将下一行的url改为vgg16.pt。从网盘下载vgg16.pt到主目录
 
 运行完成后，latent code会保存在embeddings目录中，也就是reenact_avatar_texture_fixed_w的w_path参数，pti后的模型会保存在checkpoints中。图片结果会保存在tmp中。如果觉得生成的太差，可以使用obama_modified中的obj文件。生成形象的命令：
 
