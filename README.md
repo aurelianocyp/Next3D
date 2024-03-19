@@ -186,5 +186,7 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
 ```
 报错语句改为dataset.json就行
 
+如果需要改为1*1的网格，就将reenact程序的变量设置为grid_w = 1 grid_h = 1，imgs变量初始化为[]
+
 
 
