@@ -188,5 +188,16 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
 
 如果需要改为1*1的网格，就将reenact程序的变量设置为grid_w = 1 grid_h = 1，imgs变量初始化为[]
 
+如果需要固定视角，需要添加`@click.option('--fixed_camera', type=bool, default=False)`, 在运行时需要加入fixed camera参数。需要在定义intrinsics的下方添加：
+```
+    if fixed_camera:
+        cam_pivot = torch.tensor(G.rendering_kwargs.get('avg_camera_pivot', [0, 0, 0]), device=device)
+        cam_radius = G.rendering_kwargs.get('avg_camera_radius', 2.7)
+        conditioning_cam2world_pose = LookAtPoseSampler.sample(np.pi / 2, np.pi / 2, cam_pivot, radius=cam_radius,
+                                                               device=device)
+        conditioning_params = torch.cat([conditioning_cam2world_pose.reshape(-1, 16), intrinsics.reshape(-1, 9)], 1)    
+```
+在G.synthesis上方添加`if fixed_camera:   camera_params = conditioning_params`
+
 
 
