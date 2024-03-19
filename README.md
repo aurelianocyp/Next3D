@@ -195,9 +195,10 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
         cam_radius = G.rendering_kwargs.get('avg_camera_radius', 2.7)
         conditioning_cam2world_pose = LookAtPoseSampler.sample(np.pi / 2, np.pi / 2, cam_pivot, radius=cam_radius,
                                                                device=device)
-        conditioning_params = torch.cat([conditioning_cam2world_pose.reshape(-1, 16), intrinsics.reshape(-1, 9)], 1)    
+        conditioning_params = torch.cat([conditioning_cam2world_pose.reshape(-1, 16), intrinsics.reshape(-1, 9)], 1)
+# 最后在G.synthesis上方添加`if fixed_camera:   camera_params = conditioning_params`
 ```
-在G.synthesis上方添加`if fixed_camera:   camera_params = conditioning_params`
+
 
 
 
