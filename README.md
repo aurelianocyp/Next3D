@@ -157,11 +157,9 @@ https://github.com/MrTornado24/Next3D/issues/38
 
 configs中paths_config中的dlib后面的dat路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。
 
-align_data中的pre process images中参数填上data。
-
 json文件就是常规的camera.json那种，但是其中必须有图片名+.png的那一个
 
-将configs training criteria utils dnnlib models torch_utils training_avatar_texture文件夹复制到scripts文件夹中
+将configs training criteria utils dnnlib models torch_utils training_avatar_texture文件夹复制到scripts文件夹中: `cp -r configs training criteria utils dnnlib models torch_utils training_avatar_texture scripts/`
 
 将scripts中的configs中的paths py里的eg3d_ffhq改为eg3d_ffhq = './pretrained_models/v10/network-snapshot-001362.pkl'
 
