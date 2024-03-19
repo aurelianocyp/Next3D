@@ -180,7 +180,11 @@ File "/root/autodl-tmp/1/PTI_animatable_eg3d/reenact_avatar_texture_fixed_w.py",
 KeyError: '00001.jpg'
 ```
 将jpg改为png就行
-
+```
+with open(os.path.join(drive root, "dataset exp.json')，'rb') as f:
+FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/dataset exp.ison
+```
+报错语句改为dataset.json就行
 
 
 
