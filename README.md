@@ -199,6 +199,20 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
 # 最后在G.synthesis上方添加`if fixed_camera:   camera_params = conditioning_params`
 ```
 
+如果需要保存每一帧图像，需要在layout grid的参数中添加save=0，并且在需要生成视频时的layout grid函数调用中设置save=1，在layout grid的return前添加：
+```python
+    if save:
+        save_dir = 'out_image/'
+        if not os.path.exists(save_dir):
+            os.makedirs(save_dir)
+
+        # 生成图片的路径和文件名
+        image_path = os.path.join(save_dir, 'image_{}.png'.format(len(os.listdir(save_dir))))
+
+        # 保存图片
+        imageio.imwrite(image_path, img)
+```
+
 
 
 
