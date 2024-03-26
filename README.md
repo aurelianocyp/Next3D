@@ -113,6 +113,8 @@ png文件好像只是起索引的作用，文件名有用，内容没用
 
 obj文件特别有用，控制表情和唇部的
 
+如果在模型源码中加了print却不输出，可能是因为加载模型时使用了persistence.persistent_class类保存了代码后的模型。可以添加reload_modules参数来进行重新加载模型参数，这样就是使用新的代码了。
+
 ## Training
 
 
