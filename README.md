@@ -217,7 +217,7 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
 
 ## bug
 ### reload modules
-如果出现了misc162行的assertion error，把那一行注释掉即可，这个问题会发生在reload微调后的模型的时候。但是根本原因是不重新加载的话，新模型中有两个参数是用torch.nn.Parameter定义的，属于模型内容，而原模型是用torch.tensor定义的，不属于模型内容，导致给新模型赋值时读取不到原模型的值。最好的解决方法不是注释掉assert，而是将triplane中模型的的orth_shift与orth_scale参数改为torch.tensor定义，并且在reload中将老模型的值赋给新模型。
+①如果出现了misc162行的assertion error，把那一行注释掉即可，这个问题会发生在reload微调后的模型的时候。②但是根本原因是不重新加载的话，新模型中有两个参数是用torch.nn.Parameter定义的，属于模型内容，而原模型是用torch.tensor定义的，不属于模型内容，导致给新模型赋值时读取不到原模型的值。最好的解决方法不是注释掉assert，而是将triplane中模型的的orth_shift与orth_scale参数改为torch.tensor定义，并且在reload中将老模型的值赋给新模型。③但是，即使能够重新加载模型，生成的质量依旧超级差。建议通过print(G._orig_module_src)输出原码，可以发现原码和triplane中原码非常不一样，干脆将源码复制到triplane中生成吧
 
 
 
