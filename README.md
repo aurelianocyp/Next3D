@@ -215,6 +215,9 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
         imageio.imwrite(image_path, img)
 ```
 
+## bug
+### reload modules
+如果出现了misc162行的assertion error，把那一行注释掉即可，这个问题会发生在reload微调后的模型的时候
 
 
 
