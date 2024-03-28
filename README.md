@@ -169,6 +169,8 @@ run_pti中104行default设置为eg3d_plus
 
 将scripts/training/projector中的w plus projector eg3d中70行url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'注释掉，并将下一行的url改为vgg16.pt。从网盘下载vgg16.pt到主目录
 
+如果需要重载模型，最好先将模型的原码打印出来然后复制到triplane.py中，因为模型原码与triplane中差别比较大，少了个注释中的第五步。感觉应该是triplane_v10中的代码，但是也有一点点小差别，重点是在于blended_planes的定义上
+
 运行完成后，latent code会保存在embeddings目录中，也就是reenact_avatar_texture_fixed_w的w_path参数，pti后的模型会保存在checkpoints中。图片结果会保存在tmp中。如果觉得生成的太差，可以使用obama_modified中的obj文件。生成形象的命令：
 
 ```bash
