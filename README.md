@@ -223,7 +223,7 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
 ### 微调一个多G的那个模型
 ①先把微调的模型路径改为next3d模型。然后遇到什么bug改什么bug。②可能遇到牙齿那里生成的bug。那是因为vertex没有将kpt2d包含进来。改一下base coach里加载vertex的函数就行。③训练好模型之后生成用真正的生成代码去生成就行。但是又要改bug。可能network stylegan2 styleunet有报错，应该是微调模型中的unet与原始unet不太一样，把原始unet复制过去就行。
 ### 流程
-①从网盘下载next.zip和PTI.zip②在PTI中进行微调，在next中进行生成③微调流程：④生成流程：
+①从网盘下载next.zip和PTI.zip②在PTI中进行微调，在next中进行生成③微调流程：`python scripts/run_pti.py --pivotal_tuning --mesh_path=myphoto.obj --label_path=myphoto.json`④生成流程：
 
 
 
