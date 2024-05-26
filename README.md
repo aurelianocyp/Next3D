@@ -157,7 +157,7 @@ https://github.com/MrTornado24/Next3D/issues/38
 
 把pti压缩包下载到tmp中。使用next3d的环境, 参考原生pti的文档。先处理数据，然后训练即可`python scripts/run_pti.py --pivotal_tuning --mesh_path=myphoto.obj --label_path=myphoto.json `。将obj文件和json放在住目录下，data文件中只放一个png，无需进行pti原始文档里的数据处理，直接运行scripts就行。一些注意事项：
 
-configs中paths_config中的dlib后面的dat路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。eg3d_ffhq改为`eg3d_ffhq = './pretrained_models/v10/network-snapshot-001362.pkl'`
+- configs中paths_config中的dlib路径改为`dlib = './pretrained_models/shape_predictor_68_face_landmarks.dat'`。eg3d_ffhq改为`eg3d_ffhq = './pretrained_models/v10/network-snapshot-001362.pkl'`
 
 - json obj文件参考存档D:\AAA\files\work\2023.11.30-2024.4.10毕设实现\存档\少样本存档\myphoto
 
