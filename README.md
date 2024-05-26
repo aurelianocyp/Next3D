@@ -163,7 +163,7 @@ https://github.com/MrTornado24/Next3D/issues/38
 
 - 将configs training criteria utils dnnlib models torch_utils training_avatar_texture文件夹复制到scripts文件夹中: `cp -r configs training criteria utils dnnlib models torch_utils training_avatar_texture scripts/`
 
-将scripts/training/coaches/base coach中205行的`label = [self.labels[f'{idx[3:8]}/'+idx+'.png']]`改为`label = [self.labels[idx+'.png']]`，214行也删掉`self.mesh_path, f'{idx[3:8]}/'+`
+- 将scripts/training/coaches/base coach中205行的`label = [self.labels[f'{idx[3:8]}/'+idx+'.png']]`改为`label = [self.labels[idx+'.png']]`，214行也删掉`self.mesh_path, f'{idx[3:8]}/'+`
 
 run_pti中104行default设置为eg3d_plus
 
