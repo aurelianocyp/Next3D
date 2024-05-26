@@ -149,11 +149,11 @@ python train_next3d.py --outdir=~/training-runs --cfg=ffhq --data=data/ffhq/imag
 Note that rendering-conditioned discriminator is not supported currently because obtaining rendering is still time-consuming. We are trying to accelerate this process and the training code will keep updating.
 
 ## one-shot
-https://github.com/MrTornado24/Next3D/issues/27
+https://github.com/MrTornado24/Next3D/issues/27  https://github.com/NVlabs/eg3d/issues/28  https://github.com/MrTornado24/Next3D/issues/38
 
-https://github.com/NVlabs/eg3d/issues/28
 
-https://github.com/MrTornado24/Next3D/issues/38
+
+
 
 把pti压缩包下载到tmp中。使用next3d的环境, 参考原生pti的文档。先处理数据，然后训练即可`python scripts/run_pti.py --pivotal_tuning --mesh_path=myphoto.obj --label_path=myphoto.json `。将obj文件和json放在住目录下，data文件中只放一个png，无需进行pti原始文档里的数据处理，直接运行scripts就行。一些注意事项：
 
