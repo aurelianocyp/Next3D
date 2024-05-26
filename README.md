@@ -165,7 +165,7 @@ https://github.com/MrTornado24/Next3D/issues/38
 
 - 将scripts/training/coaches/base coach中205行的`label = [self.labels[f'{idx[3:8]}/'+idx+'.png']]`改为`label = [self.labels[idx+'.png']]`，214行也删掉`self.mesh_path, f'{idx[3:8]}/'+`
 
-run_pti中104行default设置为eg3d_plus
+- run_pti中104行default设置为eg3d_plus
 
 将scripts/training/projector中的w plus projector eg3d中70行url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'注释掉，并将下一行的url改为vgg16.pt。从网盘下载vgg16.pt到主目录
 
