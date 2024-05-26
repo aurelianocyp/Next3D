@@ -225,5 +225,17 @@ FileNotFoundError: 「Errno 2l No such file or directory: 'obama-modified/datase
 ### 流程
 ①从网盘下载next.zip和PTI.zip②在PTI中进行微调，在next中进行生成③微调流程：把需要微调的图片放在data1中。该文件夹只放一张图片。将kpt2d文件改个名。然后将命令中的jso和obj都改为相应的名字。`python scripts/run_pti.py --pivotal_tuning --mesh_path=myphoto.obj --label_path=myphoto.json`，将checkpoints文件夹里生成的701338997大小（668M）的模型移动到next3d下，将0.pt移动到next3d下④生成流程：将reenact_avatar_next3d1.py中network参数默认值改为刚才移动的模型的名字，然后运行`python reenact_avatar_next3d1.py --drive_root=data/obama-modified --grid=1x1 --seeds=166 --trunc=0.7 --lms_cond=1 --reload_modules=true`
 
+### 平滑
+需要对原微调文件进行平滑，可以如下更改：
+```python
+        if k>1:
+            camera_params = (np.array(label_list[os.path.basename(img_path).replace('png', 'jpg')])+np.array(pose0)+np.array(pose1))/3
+            pose0=pose1
+            pose1=label_list[os.path.basename(img_path).replace('png', 'jpg')]
+        else:
+            camera_params = label_list[os.path.basename(img_path).replace('png', 'jpg')]
+            pose0=pose1
+            pose1=camera_params
+```
 
 
