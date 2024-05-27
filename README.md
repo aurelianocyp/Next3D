@@ -61,14 +61,17 @@ download the pretrained models for gaze estimation through the [link](https://dr
 
 ### Preparing datasets（可以不做这一步，不做的话就直接下载网盘里obama-modified.tar放到data文件夹中）
 
-The video reenactment input contains three parts: camera poses `dataset.json`, FLAME meshes ('.obj') and 2D landmark files ('.txt'). For quick start, you can download the processed talking video of President Obama [here](https://drive.google.com/file/d/1ph77uSlLz-xIVlBxwXP3Et7lTR0zHXQR/view?usp=sharing) and place the downloaded folder as `data/obama`. You can also preprocess your custom datasets by running the following commands:
+input contains three parts: camera poses `dataset.json`, FLAME meshes ('.obj') and 2D landmark files ('.txt'). 
+
+you can download the processed talking video of President Obama [here](https://drive.google.com/file/d/1ph77uSlLz-xIVlBxwXP3Et7lTR0zHXQR/view?usp=sharing) as `data/obama`.
+
+preprocess your custom datasets by running the following commands:
 
 ```.bash
 cd dataset_preprocessing/ffhq
-python preprocess_in_the_wild.py --indir=INPUT_IMAGE_FOLDER
+python preprocess_in_the_wild.py --indir=indir
 ```
-preprocessinthewild里是执行了多个python程序,建议一个一个分开运行（通过注释其他行）
-建议使用eg3d的环境进行数据处理。
+preprocessinthewild里是执行了多个python程序,建议一个一个分开运行（通过注释其他行）。建议使用d3dfr的环境进行数据处理。
 
 batch_mtcnn.py可以在现有环境做。但是需要：
 - `pip install mtcnn`
