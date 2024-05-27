@@ -90,7 +90,7 @@ batch_mtcnn.py可以在现有环境做。但是需要：
 
 三、
 
-crop_images_in_the_wild.py运行的时候，存储图片的文件夹要与程序在同目录，图片都存储在目录下即可，目录下还需要一个detections的文件夹，可以直接将d3dfr里提供的预置数据集拿过来，这个程序的结果也只是在inputdir中创建一个crop文件夹，文件夹中是裁剪之后的图片。如果报prepocess.py 202行的错，那么参考https://blog.csdn.net/m0_53127772/article/details/132492224。无需先运行test程序
+crop_images_in_the_wild.py运行的时候，存储图片的文件夹要与程序在同目录，图片都存储在目录下即可，目录下还需要一个detections的文件夹，可以直接将d3dfr里提供的预置数据集拿过来，这个程序的结果也只是在inputdir中创建一个crop文件夹，文件夹中是裁剪之后的图片。如果报prepocess.py 202行的错，那么[参考](https://blog.csdn.net/m0_53127772/article/details/132492224)。无需先运行test程序
 
 四、
 
