@@ -59,11 +59,9 @@ Download the pretrained models for FLAME estimation following [DECA](https://git
 
 download the pretrained models for gaze estimation through the [link](https://drive.google.com/drive/folders/1Jgej9q5W2IYXRa-CWCldyTVXeHk-Oi-I?usp=share_link)(faceverse_v3.npy exBase_52.npy faceverse_v3_old.npy) and put them into `dataset_preprocessing/ffhq/faceverse/data`.
 
-### Preparing datasets（可以不做这一步，不做的话就直接下载网盘里obama-modified.tar放到data文件夹中）
+## Preparing datasets
 
-input contains three parts: camera poses `dataset.json`, FLAME meshes ('.obj') and 2D landmark files ('.txt'). 
-
-you can download the processed talking video of President Obama [here](https://drive.google.com/file/d/1ph77uSlLz-xIVlBxwXP3Et7lTR0zHXQR/view?usp=sharing) as `data/obama`.
+输入包含三部分: camera poses `dataset.json`, FLAME meshes ('.obj') and 2D landmark files ('.txt'). 可以直接下载处理好的obama[数据集](https://drive.google.com/file/d/1ph77uSlLz-xIVlBxwXP3Et7lTR0zHXQR/view?usp=sharing) as `data/obama`.
 
 preprocess your custom datasets by running the following commands:
 
